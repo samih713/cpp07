@@ -27,9 +27,21 @@ class WhatEver
         {
             return name;
         }
+        const int &get_order() const
+        {
+            return order;
+        }
+        // comparision
+        bool operator>(const WhatEver &other) const;
+        bool operator>=(const WhatEver &other) const;
+        bool operator<(const WhatEver &other) const;
+        bool operator<=(const WhatEver &other) const;
+        bool operator==(const WhatEver &other) const;
 
     private:
-        string name;
+        string     name;
+        static int _order;
+        const int  order;
 };
 
 ostream &operator<<(ostream &os, const WhatEver &it);
