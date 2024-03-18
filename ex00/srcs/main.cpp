@@ -1,4 +1,5 @@
 #include "WhatEver.hpp"
+#include "whatever.hpp"
 #include <iostream>
 #include <string>
 
@@ -12,26 +13,6 @@ using std::cout;
 using std::endl;
 using std::string;
 
-// templates
-template<typename T>
-void swap(T &a, T &b)
-{
-    T temp(a);
-    a = b;
-    b = temp;
-}
-
-template<typename T>
-const T &min(const T &a, const T &b)
-{
-    return (a < b ? a : b);
-}
-
-template<typename T>
-const T &max(const T &a, const T &b)
-{
-    return (a > b ? a : b);
-}
 
 int main()
 {
@@ -52,7 +33,7 @@ int main()
 
 #endif // min comparison with actual min
 
-#if 1 // swap (can't swap consts)
+#if 0  // swap basic
     WhatEver a("samih");
     WhatEver b("kamal");
 
@@ -78,7 +59,7 @@ int main()
     cout << "...zzzzzSwaperino...!!!!" << endl;
     cout << "a after swap: " << a << endl;
     cout << "b after swbp: " << b << endl;
-#endif // basic
+#endif // swap consts
 
 #if 0  // swap comparison with actual swap
 
@@ -92,7 +73,7 @@ int main()
     cerr << RE;
 #endif // swap comparison with actual swap
 
-#if 0  // min comparison with actual min
+#if 1 // min comparison with actual min
 
     WhatEver a("samih");
     WhatEver b("kamal");
