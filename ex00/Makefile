@@ -1,5 +1,5 @@
 NAME:= ex00
 
-SRCS:= main.cpp
+SRCS:= WhatEver.cpp main.cpp
 
 -include ../.commonmakefile
