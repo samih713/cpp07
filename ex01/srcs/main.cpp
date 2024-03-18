@@ -14,10 +14,11 @@ void square(int x)
 
 int main()
 {
-    int arr[5] = { 1, 2, 3, 4, 5 };
+    int arr[] = { 1, 2, 3, 4, 5 }; // here the compiler knows how big the array is
+
     try
     {
-        iter<int>(arr, 8, square);
+        iter(arr, 1000000000000000000, square);
     }
     catch (std::out_of_range &ooe)
     {
